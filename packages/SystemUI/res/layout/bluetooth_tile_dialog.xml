@@ -190,6 +190,7 @@
                 android:paddingStart="36dp"
                 android:paddingEnd="40dp"
                 android:textSize="14sp"
+                android:fontFamily="@*android:string/config_bodyFontFamily"
                 android:textColor="@color/materialColorOnSurfaceVariant"
                 android:textAppearance="@style/TextAppearance.BluetoothTileDialog"
                 app:layout_constraintEnd_toEndOf="parent"
