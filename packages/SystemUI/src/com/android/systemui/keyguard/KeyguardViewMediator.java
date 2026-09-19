@@ -3729,9 +3729,7 @@ public class KeyguardViewMediator implements CoreStartable,
         // only play "unlock" noises if not on a call (since the incall UI
         // disables the keyguard)
         if (TelephonyManager.EXTRA_STATE_IDLE.equals(mPhoneState)) {
-            if (mShowing && mDeviceInteractive) {
-                playSounds(false);
-            }
+            playSounds(false);
         }
 
         if (!ENABLE_NEW_KEYGUARD_SHELL_TRANSITIONS) {
