@@ -479,7 +479,6 @@ public class BcSmartspaceView extends FrameLayout
         setPivotY(desiredHeight / 2.0f);
     }
 
-    // ???
     public final void onSmartspaceTargetsUpdated(
             List<? extends Parcelable> targets, Runnable runnable) {
         List<SmartspaceTarget> smartspaceTargets =
@@ -737,6 +736,12 @@ public class BcSmartspaceView extends FrameLayout
     }
 
     @Override
+    public final void setHighContrastBackgroundColor(int wallpaperColorHints) {
+        if (mAdapter != null) {
+        }
+    }
+
+    @Override
     public final void setHorizontalPaddings(int padding) {
         if (mPagerDots != null) {
             mPagerDots.setPaddingRelative(
@@ -803,15 +808,6 @@ public class BcSmartspaceView extends FrameLayout
             }
             mPagerDots.updateCurrentPageIndex(i);
         }
-    }
-
-    // DOES NOT EXIST ???
-    public final void setSelectedPage(int i) {
-        mViewPager2.post(
-                () -> {
-                    mViewPager2.setCurrentItem(i, false);
-                });
-        setSelectedDot(0.0f, i);
     }
 
     @Override

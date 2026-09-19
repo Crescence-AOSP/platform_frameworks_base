@@ -27,6 +27,10 @@ constructor(
     var artist: CharSequence? = null
     lateinit var mediaComponent: ComponentName
 
+    init {
+        mediaComponent = ComponentName(context, KeyguardMediaViewController::class.java)
+    }
+
     val mediaListener =
         object : NotificationMediaManager.MediaListener {
             override fun onPrimaryMetadataOrStateChanged(metadata: MediaMetadata?, state: Int) {
